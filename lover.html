@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Profile - Lover</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="lover">
+  <div class="overlay"></div>
+  <div class="container">
+    <!-- BACK BUTTON (hidden by default) -->
+    <a href="#" class="back-button" id="backButton">&larr; Back</a>
+
+    <!-- Main profile picture and title -->
+    <div class="profile-pic-box" id="mainProfile">
+      <img src="lover.jpg" alt="Lover Picture" class="profile-pic" />
+    </div>
+    <h1 id="mainTitle">My Profile</h1>
+
+    <!-- Navigation Menu -->
+    <nav class="nav" id="mainNav">
+      <a href="index.html">Personal Info</a>
+      <a href="hobbies.html">Hobbies</a>
+      <a href="skills.html">Skills</a>
+      <a href="education.html">Education</a>
+      <a href="contacts.html">Contacts</a>
+      <a href="#" id="showGallery">Lover</a>
+    </nav>
+
+    <!-- Collage Section (hidden by default) -->
+    <section id="gallerySection" style="display:none;">
+      <div class="aylele-title">AYLELE</div>
+      <div class="lover-collage">
+        <!-- Replace these with your own images -->
+        <img src="lover1.jpg" alt="Photo 1" />
+        <img src="lover2.jpg" alt="Photo 2" />
+        <img src="lover3.jpg" alt="Photo 3" />
+        <img src="lover4.jpg" alt="Photo 4" />
+        <img src="lover5.jpg" alt="Photo 5" />
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // Buttons and sections
+    const showGalleryBtn = document.getElementById("showGallery");
+    const gallerySection = document.getElementById("gallerySection");
+    const mainNav = document.getElementById("mainNav");
+    const backButton = document.getElementById("backButton");
+    const mainProfile = document.getElementById("mainProfile");
+    const mainTitle = document.getElementById("mainTitle");
+
+    // Show collage
+    showGalleryBtn.addEventListener("click", (e) => {
+      e.preventDefault(); // Prevent link jump
+      gallerySection.style.display = "block";
+      mainNav.style.display = "none";
+      mainProfile.style.display = "none";
+      mainTitle.style.display = "none";
+      backButton.style.display = "inline-block";
+    });
+
+    // Back to menu
+    backButton.addEventListener("click", (e) => {
+      e.preventDefault();
+      gallerySection.style.display = "none";
+      mainNav.style.display = "grid";
+      mainProfile.style.display = "flex";
+      mainTitle.style.display = "block";
+      backButton.style.display = "none";
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+/* Reset & Base */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  color: #fff;
+}
+
+/* Background Images per Page */
+body.personal {
+  background: url('https://images.pexels.com/photos/127028/pexels-photo-127028.jpeg')
+    no-repeat center center fixed;
+  background-size: cover;
+}
+body.hobbies {
+  background: url('https://images.pexels.com/photos/1047540/pexels-photo-1047540.jpeg')
+    no-repeat center center fixed;
+  background-size: cover;
+}
+body.skills {
+  background: url('https://images.pexels.com/photos/301703/pexels-photo-301703.jpeg')
+    no-repeat center center fixed;
+  background-size: cover;
+}
+body.education {
+  background: url('https://scontent.fcrk1-3.fna.fbcdn.net/v/t39.30808-6/487811491_1460445751929342_7600117625130695648_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFMDP6zzlXToPof8vOxg1VExgsrfGxoVlLGCyt8bGhWUmxOM_yP4qByn3aDxIQbJQbGy8y_Oqdi_noyFX_kHXop&_nc_ohc=KCQoKfPZmAgQ7kNvwF5-c0I&_nc_oc=AdkgaTXB-f6l97DAWE3diVH0nHkKIgS6DFH6MmwdUdkBgY3VDZPr37SRzjgJkCjXQu0&_nc_zt=23&_nc_ht=scontent.fcrk1-3.fna&_nc_gid=JfVTqAIpH6X6okajbx3iGQ&oh=00_AfQzHmGBddusRxHyHmB9PUV3SUaufzbkbiyKd2ijt3lzuQ&oe=687B1A22')
+    no-repeat center center fixed;
+  background-size: cover;
+}
+body.contacts {
+  background: url('https://images.pexels.com/photos/33999/pexels-photo.jpg')
+    no-repeat center center fixed;
+  background-size: cover;
+}
+body.lover {
+  background: url('https://images.pexels.com/photos/804561/pexels-photo-804561.jpeg')
+    no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Dark Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 0;
+}
+
+/* Container */
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  color: #fff;
+}
+h2 {
+  color: #fff;
+  margin-top: 24px;
+}
+
+/* Profile Picture */
+.profile-pic-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* Navigation */
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 16px;
+}
+.nav a {
+  display: block;
+  text-decoration: none;
+  background: rgba(128,0,0,0.8);
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.nav a:hover,
+.nav a.active {
+  background: rgba(178,34,52,0.9);
+}
+
+/* Content blocks (e.g., paragraphs, lists) */
+.info p,
+ul {
+  background: rgba(0,0,0,0.4);
+  padding: 10px;
+  border-radius: 4px;
+  margin: 6px 0;
+}
+
+/* Lover Page Back Button */
+.back-button {
+  display: none;
+  text-decoration: none;
+  color: #fff;
+  background: rgba(128,0,0,0.8);
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.back-button:hover {
+  background: rgba(178,34,52,0.9);
+}
+
+/* Lover Page Title */
+.aylele-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 16px;
+}
+
+/* Heart Collage Layout Responsive */
+.heart-collage {
+  position: relative;
+  width: 70vw;
+  max-width: 320px;
+  height: 70vw;
+  max-height: 320px;
+  margin: 24px auto;
+}
+.heart-collage .photo {
+  position: absolute;
+  width: 22%;
+  height: 22%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+/* Position each photo using percentages */
+.heart-collage .photo1 { top: 0%; left: 30%; }
+.heart-collage .photo2 { top: 0%; left: 55%; }
+.heart-collage .photo3 { top: 20%; left: 15%; }
+.heart-collage .photo4 { top: 20%; left: 70%; }
+.heart-collage .photo5 { top: 40%; left: 25%; }
+.heart-collage .photo6 { top: 40%; left: 60%; }
+.heart-collage .photo7 { top: 60%; left: 40%; }
+.heart-collage .photo8 { top: 80%; left: 35%; }
+.heart-collage .photo9 { top: 80%; left: 50%; }
+
+/* Mobile Responsive Navigation */
+@media (max-width: 500px) {
+  .nav {
+    grid-template-columns: 1fr;
+  }
+}
